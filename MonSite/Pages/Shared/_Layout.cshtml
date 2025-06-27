@@ -4,48 +4,51 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>@ViewData["Title"] - MonSite</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
-    <link rel="stylesheet" href="~/MonSite.styles.css" asp-append-version="true"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
 </head>
-<body>
-<header>
-    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-        <div class="container">
-            <a class="navbar-brand" asp-area="" asp-page="/Index">MonSite</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                <ul class="navbar-nav flex-grow-1">
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+
+<body class="min-h-screen flex flex-col" style="background-image: url('photo_fond.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center;">
+<header class="fixed top-0 left-0 w-full bg-[#17202a] z-50 flex items-center justify-between px-10 py-4 shadow-md">
+    <a asp-page="/Index">
+        <img src="logoArthurBailly.png" alt="Logo" class="w-10 h-10 object-contain" />
+    </a>
+
+    @{
+        var currentPage = ViewContext.ActionDescriptor?.RouteValues["page"];
+        Console.WriteLine(currentPage+" lsdknvsdlkhvm");
+    }
+
+    <nav class="flex space-x-8">
+
+
+        <a asp-page="/Index" class="text-sm text-white pb-2 border-b-2 transition-all duration-200 @(currentPage == "/Index" ? "border-white font-bold" : "border-transparent hover:border-gray-200")">Home</a>
+        <a asp-page="/Index" class="text-sm text-white pb-2 border-b-2 transition-all duration-200 @(currentPage == "/Realisation" ? "border-white font-bold" : "border-transparent hover:border-gray-200")">Réalisations</a>
+        <a asp-page="/Index" class="text-sm text-white pb-2 border-b-2 transition-all duration-200 @(currentPage == "/Contact" ? "border-white font-bold" : "border-transparent hover:border-gray-200")">Contact</a>
+        <a asp-page="/Index" class="text-sm text-white pb-2 border-b-2 transition-all duration-200 @(currentPage == "/Connexion" ? "border-white font-bold" : "border-transparent hover:border-gray-200")">Connexion</a>
+        <a href="https://www.linkedin.com/in/ton-profil" target="_blank" class="text-white hover:opacity-80">
+            <i class="fab fa-linkedin fa-lg"></i>
+        </a>
+
     </nav>
 </header>
-<div class="container">
-    <main role="main" class="pb-3">
+
+<!-- Ajout d'un padding-top pour ne pas cacher le contenu sous le header -->
+<div class="flex-grow pt-24">
+    <main role="main" class="pb-3 container mx-auto">
         @RenderBody()
     </main>
 </div>
 
-<footer class="border-top footer text-muted">
-    <div class="container">
-        &copy; 2025 - MonSite - <a asp-area="" asp-page="/Privacy">Privacy</a>
+<footer class="text-center text-sm text-gray-400 py-4 border-t">
+    <div class="container mx-auto">
+        &copy; 2025 - MonSite - <a asp-area="" asp-page="/Privacy" class="underline hover:text-gray-200">Privacy</a>
     </div>
 </footer>
-
-<script src="~/lib/jquery/dist/jquery.min.js"></script>
-<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<script src="~/js/site.js" asp-append-version="true"></script>
-
-@await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
