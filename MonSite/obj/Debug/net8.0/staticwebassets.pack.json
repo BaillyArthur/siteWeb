@@ -245,8 +245,12 @@
       "PackagePath": "staticwebassets\\logoArthurBailly.png"
     },
     {
-      "Id": "C:\\Users\\asus\\Desktop\\Site\\MonSite\\MonSite\\wwwroot\\photo_index.JPG",
-      "PackagePath": "staticwebassets\\photo_index.JPG"
+      "Id": "C:\\Users\\asus\\Desktop\\Site\\MonSite\\MonSite\\wwwroot\\photoProfil.jpg",
+      "PackagePath": "staticwebassets\\photoProfil.jpg"
+    },
+    {
+      "Id": "C:\\Users\\asus\\Desktop\\Site\\MonSite\\MonSite\\wwwroot\\photo_fond.jpg",
+      "PackagePath": "staticwebassets\\photo_fond.jpg"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.MonSite.Microsoft.AspNetCore.StaticWebAssets.props",

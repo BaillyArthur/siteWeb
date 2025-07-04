@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "p6YYG5B+Y5Q/eY1vOF/7rIPbUbFZS5ZKGPpM1bmMVWA=",
+  "Hash": "coVtQWIDTV+eTQG0Sc4/qrZJ4DBqDtUiaiMEtEfmX9k=",
   "Source": "MonSite",
   "BasePath": "_content/MonSite",
   "Mode": "Default",
@@ -1195,12 +1195,12 @@
       "OriginalItemSpec": "wwwroot\\logoArthurBailly.png"
     },
     {
-      "Identity": "C:\\Users\\asus\\Desktop\\Site\\MonSite\\MonSite\\wwwroot\\photo_index.JPG",
+      "Identity": "C:\\Users\\asus\\Desktop\\Site\\MonSite\\MonSite\\wwwroot\\photo_fond.jpg",
       "SourceId": "MonSite",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\asus\\Desktop\\Site\\MonSite\\MonSite\\wwwroot\\",
       "BasePath": "_content/MonSite",
-      "RelativePath": "photo_index.JPG",
+      "RelativePath": "photo_fond.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1211,7 +1211,26 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\photo_index.JPG"
+      "OriginalItemSpec": "wwwroot\\photo_fond.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\asus\\Desktop\\Site\\MonSite\\MonSite\\wwwroot\\photoProfil.jpg",
+      "SourceId": "MonSite",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\asus\\Desktop\\Site\\MonSite\\MonSite\\wwwroot\\",
+      "BasePath": "_content/MonSite",
+      "RelativePath": "photoProfil.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\photoProfil.jpg"
     }
   ]
 }

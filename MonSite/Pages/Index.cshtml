@@ -4,7 +4,71 @@
     ViewData["Title"] = "Home page";
 }
 
-<h1>Hi There, <br/>I'm Arthur Bailly</h1>
-<h2>I'm into Web development </h2>
-<img src="download.png"/>
+<div class="flex items-center justify-between gap-6 mt-8 mb-24">
+    <div class="flex flex-col ml-[240px]">
+        <h1 class="text-5xl font-bold">Hi There,<br>I'm <span class="text-[#ff7001]">Arthur Bailly</span></h1>
+        <h2 class="text-2xl text-gray-600 mt-2">I am into Web development</h2>
+        <button class="bg-[#160180] text-white w-28 h-10 rounded-full hover:bg-blue-700 transition mt-3"
+                onclick="scrollToSection()">
+            About me
+        </button>
+    </div>
+    <div class="flex flex-col mr-[240px]">
+        <img src="photoProfil.jpg" alt="Photo de moi"
+             class="w-72 h-72 rounded-full object-cover border border-gray-300">
+    </div>
+</div>
+<hr class="border-[#b9b9b9] w-[18rem] mx-auto mb-4">
+<h2 class="text-center text-xl">Mes dernieres réalisations</h2>
+<div class="flex justify-center gap-8 mt-8">
+    <!-- 1er bloc -->
+    @for (int i = 0; i < 3; i++)
+    {
+        <a asp-page="/Project" asp-route-idProject="@i">
+            <div class="w-64 h-auto bg-gradient-to-b from-white to-gray-200 shadow-xl flex flex-col items-start p-4">
+                <img src="photoProfil.jpg" alt="Photo de moi" class="w-60 h-20 object-cover self-center mb-2">
+                <p class="text-black text-base">Star colonies</p>
+                <p class="text-[#acacac] text-sm">Site internet</p>
+            </div>
+        </a>
+    }
+</div>
+
+<hr class="border-[#b9b9b9] w-[18rem] mx-auto mb-4 mt-10">
+<section id="aboutMe" class="bg-white py-12">
+    <h2 class="text-center text-3xl font-bold text-gray-800 mb-8">À propos de moi</h2>
+
+    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-10 px-6">
+        <!-- Photo (optionnelle mais conseillée) -->
+        <img src="photoProfil.jpg" alt="Arthur Bailly"
+             class="w-48 h-48  object-cover shadow-md hidden md:block"/>
+
+        <!-- Texte -->
+        <div class="text-gray-700 text-lg leading-relaxed">
+            <p class="mb-4">
+                Je m'appelle <strong>Arthur Bailly</strong>, actuellement en troisième année de bachelier en
+                développement d’applications à <strong>HELMo campus Guillemins</strong>.
+            </p>
+            <p class="mb-4">
+                Ce site a pour but de centraliser et présenter mes différents projets personnels, académiques et
+                professionnels.
+            </p>
+            <p>
+                Passionné par le développement et les nouvelles technologies, je suis toujours curieux et motivé à
+                apprendre. Je cherche à élargir mes compétences à travers des expériences concrètes et des
+                collaborations enrichissantes.
+            </p>
+        </div>
+    </div>
+</section>
+
+<script>
+    function scrollToSection() {
+        const section = document.getElementById('aboutMe');
+        if (section) {
+            section.scrollIntoView({behavior: 'smooth'});
+        }
+    }
+</script>
+
 

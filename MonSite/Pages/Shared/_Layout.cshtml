@@ -27,10 +27,10 @@
     <nav class="flex space-x-8">
 
 
-        <a asp-page="/Index" class="text-sm text-white pb-2 border-b-2 transition-all duration-200 @(currentPage == "/Index" ? "border-white font-bold" : "border-transparent hover:border-gray-200")">Home</a>
-        <a asp-page="/Index" class="text-sm text-white pb-2 border-b-2 transition-all duration-200 @(currentPage == "/Realisation" ? "border-white font-bold" : "border-transparent hover:border-gray-200")">Réalisations</a>
-        <a asp-page="/Index" class="text-sm text-white pb-2 border-b-2 transition-all duration-200 @(currentPage == "/Contact" ? "border-white font-bold" : "border-transparent hover:border-gray-200")">Contact</a>
-        <a asp-page="/Index" class="text-sm text-white pb-2 border-b-2 transition-all duration-200 @(currentPage == "/Connexion" ? "border-white font-bold" : "border-transparent hover:border-gray-200")">Connexion</a>
+        <a asp-page="/Index" class="text-sm text-white pb-2 border-b-2 transition-all  hover:opacity-80 duration-200 @(currentPage == "/Index" ? "border-white font-bold" : "border-transparent hover:border-gray-200")">Home</a>
+        <a asp-page="/Index" class="text-sm text-white pb-2 border-b-2 transition-all hover:opacity-80 duration-200 @(currentPage == "/Realisation" ? "border-white font-bold" : "border-transparent hover:border-gray-200")">Réalisations</a>
+        <a asp-page="/Index" class="text-sm text-white pb-2 border-b-2 transition-all hover:opacity-80 duration-200 @(currentPage == "/Contact" ? "border-white font-bold" : "border-transparent hover:border-gray-200")">Contact</a>
+        <a asp-page="/Index" class="text-sm text-white pb-2 border-b-2 transition-all hover:opacity-80 duration-200 @(currentPage == "/Connexion" ? "border-white font-bold" : "border-transparent hover:border-gray-200")">Connexion</a>
         <a href="https://www.linkedin.com/in/ton-profil" target="_blank" class="text-white hover:opacity-80">
             <i class="fab fa-linkedin fa-lg"></i>
         </a>
@@ -40,7 +40,7 @@
 
 <!-- Ajout d'un padding-top pour ne pas cacher le contenu sous le header -->
 <div class="flex-grow pt-24">
-    <main role="main" class="pb-3 container mx-auto">
+    <main role="main" class="container mx-auto">
         @RenderBody()
     </main>
 </div>
