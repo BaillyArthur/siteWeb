@@ -1,15 +1,15 @@
-﻿using Microsoft.AspNetCore.Mvc.RazorPages;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace MonSite.Pages;
 
 public class ProjectModel : PageModel
 {
-    
+    [BindProperty(SupportsGet = true)]
     public int? IdProject { get; set; }
 
-    public void OnGet(int? idProject)
+    public void OnGet()
     {
-        IdProject = idProject;
+        // utilise IdProject ici
     }
-    
 }

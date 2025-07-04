@@ -24,7 +24,7 @@
     <!-- 1er bloc -->
     @for (int i = 0; i < 3; i++)
     {
-        <a asp-page="/Project" asp-route-idProject="@i">
+        <a asp-page="/Project" asp-route-idProject="@(i.ToString())">
             <div class="w-64 h-auto bg-gradient-to-b from-white to-gray-200 shadow-xl flex flex-col items-start p-4">
                 <img src="photoProfil.jpg" alt="Photo de moi" class="w-60 h-20 object-cover self-center mb-2">
                 <p class="text-black text-base">Star colonies</p>
@@ -47,7 +47,7 @@
         <div class="text-gray-700 text-lg leading-relaxed">
             <p class="mb-4">
                 Je m'appelle <strong>Arthur Bailly</strong>, actuellement en troisième année de bachelier en
-                développement d’applications à <strong>HELMo campus Guillemins</strong>.
+                développement d’applications à <strong>HELMo</strong>.
             </p>
             <p class="mb-4">
                 Ce site a pour but de centraliser et présenter mes différents projets personnels, académiques et
